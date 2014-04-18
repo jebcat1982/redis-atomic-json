@@ -1,0 +1,31 @@
+{
+  "name": "redis-atomic-json",
+  "version": "0.0.1",
+  "description": "Atomic JSON operations for Redis.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/lab -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:npm/redis-atomic-json.git"
+  },
+  "keywords": [
+    "redis",
+    "atomic",
+    "JSON"
+  ],
+  "devDependencies": {
+    "redis": "0.10.1",
+    "lab": "3.0.1",
+    "async": "0.7.0",
+    "bluebird": "1.2.3"
+  },
+  "dependencies": {},
+  "author": "Benjamin Coe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/npm/redis-atomic-json/issues"
+  },
+  "homepage": "https://github.com/npm/redis-atomic-json"
+}
