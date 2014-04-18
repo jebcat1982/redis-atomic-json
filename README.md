@@ -1,7 +1,7 @@
 Redis Atomic JSON
 =================
 
-Wraps (node_redis)[https://github.com/mranney/node_redis], adding the support for atomic updates to JSON blobs.
+Wraps [node_redis](https://github.com/mranney/node_redis), adding the support for atomic updates to JSON blobs.
 
 Usage
 -----
