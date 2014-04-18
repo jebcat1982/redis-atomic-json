@@ -1,6 +1,8 @@
 Redis Atomic JSON
 =================
 
+Build Status: [![Build Status](https://travis-ci.org/npm/redis-atomic-json.png)](https://travis-ci.org/npm/redis-atomic-json)
+
 Wraps [node_redis](https://github.com/mranney/node_redis), adding the support for atomic updates to JSON blobs.
 
 Usage
