@@ -1,6 +1,6 @@
 {
   "name": "redis-atomic-json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Atomic JSON operations for Redis.",
   "main": "lib/index.js",
   "scripts": {

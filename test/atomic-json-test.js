@@ -50,6 +50,21 @@ Lab.experiment('jset', function () {
     }).done();
   });
 
+  Lab.test('it can populate a session with a hash rather than a key and value', function (done) {
+    var expected = {
+      foo: 'bar'
+    };
+
+    del(jsonKey).then(function() {
+      return jset(jsonKey, expected);
+    }).then(function() {
+      return jgetall(jsonKey);
+    }).then(function(value) {
+      Lab.expect(value).to.deep.equal(expected);
+      done();
+    }).done();
+  });
+
   Lab.test('it can update a JSON object that already exists', function(done) {
     var expected = {
       foo: 'bar',
@@ -150,10 +165,17 @@ function jset(json, key, value) {
     // Sleep a random # of ms, to encourage timing
     // issues.
     setTimeout(function() {
-      client.jset(json, key, value, function(err) {
-        if (err) reject(err);
-        else resolve();
-      });
+      if (typeof value === 'undefined') {
+        client.jset(json, key, function(err) {
+          if (err) reject(err);
+          else resolve();
+        });
+      } else {
+        client.jset(json, key, value, function(err) {
+          if (err) reject(err);
+          else resolve();
+        });
+      }
     }, Math.random() * 100);
   });
 }
