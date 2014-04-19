@@ -34,6 +34,10 @@ Atomically set a field on a JSON blob:
 
 ```javascript
 client.jset('my-json-blob', 'newKey', 33.5);
+
+// or.
+
+client.jset('my-json-blob', {newKey: 33.5})
 ```
 
 jdel
